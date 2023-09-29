@@ -7,8 +7,7 @@ function App() {
     const [loading, setLoading] = useState(false);
   
     useEffect(() => {
-      // You can use a markdown-to-html library here to convert markdown to HTML.
-      // For this example, we'll use a simple method that replaces newlines with <br>.
+      
       const convertedHtml = markdown.replace(/\n/g, '<br>');
       setHtml(convertedHtml);
     }, [markdown]);
@@ -29,7 +28,7 @@ function App() {
         </div>
         <div className="preview">
         {loading ? (
-          <p className="loading">Loading...</p>
+          <h1 className="loading">Loading...</h1>
         ) : (
           <strong><h1 dangerouslySetInnerHTML={{ __html: markdown }} /> </strong>
         )}
