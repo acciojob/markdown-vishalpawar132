@@ -28,8 +28,12 @@ function App() {
           />
         </div>
         <div className="preview">
-          {loading ? <p className="loading">Loading...</p> : <div dangerouslySetInnerHTML={{ __html: html }} />}
-        </div>
+        {loading ? (
+          <p className="loading">Loading...</p>
+        ) : (
+          <h1 dangerouslySetInnerHTML={{ __html: markdown }} />
+        )}
+      </div>
       </div>
     );
   }
