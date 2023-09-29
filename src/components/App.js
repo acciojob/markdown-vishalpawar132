@@ -31,7 +31,7 @@ function App() {
         {loading ? (
           <p className="loading">Loading...</p>
         ) : (
-          <h1 dangerouslySetInnerHTML={{ __html: markdown }} /> 
+          <strong><h1 dangerouslySetInnerHTML={{ __html: markdown }} /> </strong>
         )}
       </div>
       </div>
